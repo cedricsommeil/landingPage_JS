@@ -65,13 +65,13 @@ closebutton2.addEventListener("click", closeModal2);
 // close modal function 
 function closeModal2() {
 modalbg2.style.display = "none";
-modalbg.style.display = "none";/* */
+modalbg.style.display = "none";
 }
 
 
 
 /* rajout du troisième bouton*/
-const closebutton3 = document.getElementById('close2');/*c'est le bouton close lign 229 en html*/
+const closebutton3 = document.getElementById('close2');/*c'est le bouton close lign 229 en html , soit tu peut fermer par la croix ou le bouton*/
 
 // close modal event
 closebutton3.addEventListener("click" , closeModal2);
