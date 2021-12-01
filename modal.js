@@ -8,34 +8,38 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");/*qui represent la modale*/
+const modalbg = document.querySelector(".bground");//qui represente en html de la modale
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
-/*****************fermer la fenetre de la modale*******************************/
-const closebutton = document.querySelector(".close");/*la croix*/
+
+
+
+
+/*fermer la fenetre de la modale*/
+const closebutton = document.querySelector(".close");//la croix
 
 const radio = document.querySelectorAll("input[type='radio']");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-/*lig 21:ceci est une boucle sur tous les boutons a laquelle on a mis un ecouteur d'evenement 
-pour detecter un click, des qu'un bouton sera effectuer il va lancer la fonction launch modal*/
+//lig 21:ceci est une boucle sur tous les boutons à laquelle on a mis un ecouteur d'evenement 
+//pour detecter un click, des qu'un bouton sera effectuer il va lancer la fonction launch modal
 
 
 
-/* donc apres la lign 21: on peut expliquer la launch modal , elle rend la modale en display block alors qu'auparavant elle etait en display none*/
+// donc apres la lign 21: on peut expliquer la launch modal , elle rend la modale en display block alors qu'auparavant elle etait en display none*/
 // launch modal form
 function launchModal() {
 modalbg.style.display = "block";
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
-/*lig31, 32: c'est le faite de remettre l'écran en haut , d'avoir un scroll automatique,*/
+//lig31, 32: c'est le faite de remettre l'écran en haut , d'avoir un scroll automatique,
 }
 
-/*apres lig31, 32 c'est fermer la modale, on ajoute un ecouteur d'evenement*/
+//apres lig31, 32 c'est fermer la modale, on ajoute un ecouteur d'evenement
 // close modal event
-closebutton.addEventListener("click", closeModal);/*c'est le click qui va appeller la close modal*/
+closebutton.addEventListener("click", closeModal);//c'est le click qui va appeller la close modal
 
 // close modal function 
 function closeModal() {
@@ -43,14 +47,11 @@ modalbg.style.display = "none";
 }
 
 
-/*******************************************************
- *  
- *               à revoir rapidement
- *               B.M
- * 
- *************************************************************/
 
-const closebutton2 = document.getElementById("close");/*c'est le bouton close de la croix lign 226 en html*/
+ 
+/* Ceci concerne la Modal2 message de félicitation sont ouverture et sa fermeture et la modal1*/
+
+const closebutton2 = document.getElementById("close");//c'est le bouton close avec la croix lign 226 en html
 const modalbg2 = document.getElementById('bground2');
 
 function launchModal2() {
@@ -59,36 +60,33 @@ function launchModal2() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-// close modal event
+// close modal2 event
 closebutton2.addEventListener("click", closeModal2);
 
-// close modal function 
+// close modal1 et 2 function 
 function closeModal2() {
 modalbg2.style.display = "none";
 modalbg.style.display = "none";
 }
 
+// rajout du troisième bouton
+const closebutton3 = document.getElementById('close2');//c'est le bouton close lign 229 en html 
+//il est facultatif dans le formulaire on a juste besoin de la croix , soit tu peut fermer par la croix ou le bouton sa lancera la fonction la closemodale2 */
 
-
-/* rajout du troisième bouton*/
-const closebutton3 = document.getElementById('close2');/*c'est le bouton close lign 229 en html , soit tu peut fermer par la croix ou le bouton*/
-
-// close modal event
+// close modal3 event
 closebutton3.addEventListener("click" , closeModal2);
 
 
 
 
 
+/*Validation de submit*/
 
-
-/************************Validation de submit****************** */
-// validation de submit
 document.getElementById("inscription").addEventListener("submit", function(e){
-  e.preventDefault();/*preventDefault ...c'est pour arreter l'attitude par defaut d'une soumission de formulaire
-  de part ce biais on garde les donnés du formumlaire rempli par l'utilisateur parce que PreventDefault empeche le rechargement de la page*/
+  e.preventDefault();//preventDefault ...c'est pour arreter l'attitude par defaut d'une soumission de formulaire
+//de part ce biais on garde les donnés du formumlaire rempli par l'utilisateur parce que PreventDefault empeche le rechargement de la page*/
 
-/*j'ai tout d'abord déclaré mes const en les ciblant par leurs ID*/
+// j'ai tout d'abord déclaré mes const en les ciblant par leurs ID
  const prenom = document.getElementById('first');
  const nom = document.getElementById('last');
  const date = document.getElementById('birthdate');
@@ -96,10 +94,10 @@ document.getElementById("inscription").addEventListener("submit", function(e){
  const concour = document.getElementById ('quantity');
  const condition = document.getElementById ('checkbox1');
 
-/*j'ai declaré une variable erreur a FALSE , pour pa&rtir du principe qu'il n'ya aucune erreur*/
+//j'ai declaré une variable erreur a FALSE , pour pa&rtir du principe qu'il n'ya aucune erreur
 var erreur = false;
 
-/*ensuite j'ai mis des vonditions pour chaque champs, pour verifier est ce que c'est vide ex...*/
+//ensuite j'ai mis des conditions pour chaque champs, pour verifier est ce que c'est vide ex
 if (prenom.value.length < 2 || prenom.value === ""){
     document.getElementById('prenom_erreur').innerHTML='Veuillez mettre le prénom avec deux caractères minimun';
     erreur =true;
@@ -128,7 +126,7 @@ if (date.value  === ""){
   document.getElementById('date_erreur').innerHTML="";
 }
 
-/*Isinterger(chiffre en anglais) verifie uniquement qu'on rentre bien un nombre*/
+//Isinterger(chiffre en anglais) verifie uniquement qu'on rentre bien un nombre
 if ((concour.value).isInteger || concour.value === ""){
   document.getElementById('concour_erreur').innerHTML='Veuillez mettre un nombre entier';
   erreur =true;
@@ -155,17 +153,15 @@ console.log(erreur);
 if(erreur == false){
   launchModal2();
 
-}
- 
- 
-   
+} 
 });
 
 
-/*************************validation du mail******************* */
 
+
+//Validation du mail
 function ValidateEmail(input) {
-/*j'ai copié ce regex qui verifie que le mail correspond au standard*/
+//j'ai copié ce regex qui verifie que le mail correspond au standard
   var validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
 
   if (input.value.match(validRegex)) {
@@ -182,12 +178,7 @@ function ValidateEmail(input) {
 
 
 
-/***********selection du bouton radio, et d'une case condition coché*********** */
-// selectionner un bouton radio par defaut
-
-
-
-
+//selection du bouton radio, et d'une case condition coché
 
 function checkRadioButton(){
 
@@ -208,4 +199,4 @@ function checkRadioButton(){
 
 }
 
-
+ }

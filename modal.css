@@ -135,7 +135,7 @@ img {
   }
 
   #bground2 .modal-body {
-    padding: 200px 8% !important; /* c'est deux la son rajouté par bm 139, 142*/
+    padding: 200px 8% !important; /* c'est deux la son rajouté par bmground 139, 142*/
   }
   #bground2 h1 {
     font-size: 2rem !important;
@@ -160,8 +160,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
