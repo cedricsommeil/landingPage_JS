@@ -19,8 +19,8 @@ const radio = document.querySelectorAll("input[type='radio']");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-/*lig 21:ceci est une boucle sur tous les boutons a laquelle on amis un ecouteur d'evenement 
-pour detecter un click, des qu'un b outon sera effectuer il va lancer la fonction launch modal*/
+/*lig 21:ceci est une boucle sur tous les boutons a laquelle on a mis un ecouteur d'evenement 
+pour detecter un click, des qu'un bouton sera effectuer il va lancer la fonction launch modal*/
 
 
 
@@ -50,7 +50,7 @@ modalbg.style.display = "none";
  * 
  *************************************************************/
 
-const closebutton2 = document.getElementById("close");
+const closebutton2 = document.getElementById("close");/*c'est le bouton close de la croix lign 226 en html*/
 const modalbg2 = document.getElementById('bground2');
 
 function launchModal2() {
@@ -71,7 +71,7 @@ modalbg.style.display = "none";/* */
 
 
 /* rajout du troisième bouton*/
-const closebutton3 = document.getElementById('close2');
+const closebutton3 = document.getElementById('close2');/*c'est le bouton close lign 229 en html*/
 
 // close modal event
 closebutton3.addEventListener("click" , closeModal2);
