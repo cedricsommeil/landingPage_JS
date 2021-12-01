@@ -56,9 +56,9 @@ const modalbg2 = document.getElementById('bground2');
 function launchModal2() {
   modalbg.style.display ="none";
   modalbg2.style.display = "block";
-  document.body.scrollTop = 0;/*qd tu lance la launch tu revient tout en haut de la page*/
-  document.documentElement.scrollTop = 0;/*fait ala derniere seance */
-  }
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+
 // close modal event
 closebutton2.addEventListener("click", closeModal2);
 
