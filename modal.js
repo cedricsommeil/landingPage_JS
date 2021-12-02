@@ -49,7 +49,7 @@ modalbg.style.display = "none";
 
 
  
-/* Ceci concerne la Modal2 message de félicitation sont ouverture et sa fermeture et la modal1*/
+/* Ceci concerne la Modal2 message de félicitation sont ouverture et sa fermeture avec la modal1*/
 
 const closebutton2 = document.getElementById("close");//c'est le bouton close avec la croix lign 226 en html
 const modalbg2 = document.getElementById('bground2');
