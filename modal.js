@@ -59,7 +59,7 @@ function launchModal2() {
   modalbg2.style.display = "block";
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-
+}
 // close modal2 event
 closebutton2.addEventListener("click", closeModal2);
 
@@ -71,7 +71,7 @@ modalbg.style.display = "none";
 
 // rajout du troisième bouton
 const closebutton3 = document.getElementById('close2');//c'est le bouton close lign 229 en html 
-//il est facultatif dans le formulaire on a juste besoin de la croix , soit tu peut fermer par la croix ou le bouton sa lancera la fonction la closemodale2 */
+//il est facultatif dans le formulaire on a juste besoin de la croix , soit tu peux fermer par la croix ou le bouton sa lancera la fonction la closemodale2 */
 
 // close modal3 event
 closebutton3.addEventListener("click" , closeModal2);
@@ -199,4 +199,4 @@ function checkRadioButton(){
 
 }
 
- }
+
