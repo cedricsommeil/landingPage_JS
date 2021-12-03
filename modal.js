@@ -8,7 +8,7 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");//qui represente en html de la modale
+const modalbg = document.querySelector(".bground");//qui represente en html la modale
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
@@ -94,10 +94,11 @@ document.getElementById("inscription").addEventListener("submit", function(e){
  const concour = document.getElementById ('quantity');
  const condition = document.getElementById ('checkbox1');
 
-//j'ai declaré une variable erreur a FALSE , pour pa&rtir du principe qu'il n'ya aucune erreur
+//j'ai declaré une variable erreur a FALSE , pour partir du principe qu'il n'y a aucune erreur
 var erreur = false;
 
-//ensuite j'ai mis des conditions pour chaque champs, pour verifier est ce que c'est vide ex
+//ensuite j'ai mis des conditions pour chaque champs, pour verifier est ce que c'est vide ou que les éléments 
+// attendu sont correctes
 if (prenom.value.length < 2 || prenom.value === ""){
     document.getElementById('prenom_erreur').innerHTML='Veuillez mettre le prénom avec deux caractères minimun';
     erreur =true;
@@ -152,7 +153,7 @@ document.getElementById('condition_erreur').innerHTML="";
 console.log(erreur);
 if(erreur == false){
   launchModal2();
-
+//Si le formulaire est correct sa lancera la fonction launchModal2 qui répresente le message de félicitation
 } 
 });
 
@@ -161,7 +162,7 @@ if(erreur == false){
 
 //Validation du mail
 function ValidateEmail(input) {
-//j'ai copié ce regex qui verifie que le mail correspond au standard
+//j'ai copié ce regex sur internet qui verifie que le mail correspond au standard
   var validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
 
   if (input.value.match(validRegex)) {
@@ -171,15 +172,12 @@ function ValidateEmail(input) {
   } else {
 
     return false;
-
   }
-
 }
 
 
 
 //selection du bouton radio, et d'une case condition coché
-
 function checkRadioButton(){
 
  var radioCheck = false;
@@ -195,7 +193,6 @@ function checkRadioButton(){
   }
   
   return radioCheck;
-
 
 }
 
