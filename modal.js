@@ -16,8 +16,10 @@ const formData = document.querySelectorAll(".formData");
 
 
 
-/*fermer la fenetre de la modale*/
+/*fermer la fenêtre de la modale*/
 const closebutton = document.querySelector(".close");//la croix
+
+
 
 const radio = document.querySelectorAll("input[type='radio']");
 
@@ -150,13 +152,12 @@ document.getElementById('condition_erreur').innerHTML="";
 }
 
 
-console.log(erreur);
+
 if(erreur == false){
   launchModal2();
 //Si le formulaire est correct sa lancera la fonction launchModal2 qui répresente le message de félicitation
 } 
 });
-
 
 
 
